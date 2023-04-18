@@ -1,21 +1,19 @@
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'dart:ui' as ui;
 
-import 'package:pfe_project/constants.dart';
-import 'package:pfe_project/dashbord.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
-
-class AccesPage extends StatefulWidget {
-  const AccesPage({super.key});
+class FireDetector extends StatefulWidget {
+  const FireDetector({super.key});
 
   @override
-  State<AccesPage> createState() => _AccesPageState();
+  State<FireDetector> createState() => _FireDetectorState();
 }
 
-class _AccesPageState extends State<AccesPage>
+class _FireDetectorState extends State<FireDetector>
     with SingleTickerProviderStateMixin {
-  bool isChecked = true;
-
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -48,18 +46,18 @@ class _AccesPageState extends State<AccesPage>
               ),
               SizedBox(height: size.height * 0.03),
               Text(
-                "RFID SENSOR ACCESS PAGE",
+                "FIRE DETECTOR PAGE",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: ui.Color.fromARGB(255, 8, 30, 48),
                   fontWeight: FontWeight.bold,
-                  fontSize: 28,
+                  fontSize: 26,
                   fontStyle: FontStyle.italic,
                 ),
               ),
               SizedBox(height: size.height * 0.02),
               Text(
-                "Access Control with RFID Technology ",
+                "Fire Detecor with Flame Sensor ",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: ui.Color.fromARGB(255, 8, 30, 48),
@@ -77,26 +75,27 @@ class _AccesPageState extends State<AccesPage>
                       radius: 120,
                       lineWidth: 5,
                       percent: 1.0,
-                      progressColor: isChecked ? Colors.green : Colors.red,
+                      progressColor: isChecked ? Colors.red : Colors.green,
                       center: isChecked
                           ? Image.asset(
-                              'assets/image/open.png',
-                              height: 300,
-                              width: 250,
+                              'assets/image/house1.png',
+                              height: 190,
+                              width: 160,
                             )
                           : Image.asset(
-                              'assets/image/close.png',
-                              height: 300,
-                              width: 250,
+                              'assets/image/house3.png',
+                              height: 190,
+                              width: 160,
                             ),
                     ),
                     const SizedBox(height: 30),
                     Center(
                       child: Text(
-                        isChecked ? 'OPEN' : 'LOCKED',
+                        textAlign: TextAlign.center,
+                        isChecked ? 'FIRE \n DETECTED' : 'FIRE \n NOT-DETECTED',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: isChecked ? Colors.green : Colors.red,
+                          color: isChecked ? Colors.red.shade800 : Colors.green,
                           fontSize: 30,
                         ),
                       ),

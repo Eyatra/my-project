@@ -2,13 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pfe_project/acces.dart';
 import 'package:pfe_project/constants.dart';
-import 'package:pfe_project/SensorScreen/sensor_screen.dart';
 
-import 'package:pfe_project/AccountPage.dart';
+import 'package:pfe_project/fire.dart';
 import 'package:pfe_project/login.dart';
+import 'package:pfe_project/motion.dart';
 import 'package:pfe_project/temperature.dart';
 
 import '../../hum.dart';
+import '../../map.dart';
 
 class Dashboardbody extends StatefulWidget {
   const Dashboardbody({super.key});
@@ -75,7 +76,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const MotionDetector(),
                       ),
                     );
                   },
@@ -89,7 +90,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const FireDetector(),
                       ),
                     );
                   },
@@ -109,7 +110,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const MyMap(),
                       ),
                     );
                   },
@@ -157,7 +158,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const TemperaturePage(),
                       ),
                     );
                   },
@@ -171,7 +172,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const TemperaturePage(),
                       ),
                     );
                   },
@@ -185,7 +186,7 @@ class _DashboardbodyState extends State<Dashboardbody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const AccountPage(),
+                        builder: (context) => const TemperaturePage(),
                       ),
                     );
                   },

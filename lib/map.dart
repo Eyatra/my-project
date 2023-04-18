@@ -19,12 +19,13 @@ class _MyMapState extends State<MyMap> {
       ),
       children: [
         TileLayer(
-          urlTemplate: 'https://api.mapbox.com/styles/v1/amenmelki/clehna5f1003t01k41ft2eiy7/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW1lbm1lbGtpIiwiYSI6ImNsZWgzeXVjdjBjcnozeW14c3BjNW42MGsifQ.Z9Isfs8sjZR5rj4ZKvKVdQ',
-          additionalOptions:{
-          'access token':'pk.eyJ1IjoiYW1lbm1lbGtpIiwiYSI6ImNsZWgzeXVjdjBjcnozeW14c3BjNW42MGsifQ.Z9Isfs8sjZR5rj4ZKvKVdQ',
-        'id': 'mapbox.mapbox-streets-v8'
-        }
-        ),
+            urlTemplate:
+                'https://api.mapbox.com/styles/v1/amenmelki/clglmich200at01qy9rzf0xkj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW1lbm1lbGtpIiwiYSI6ImNsZWgzeXVjdjBjcnozeW14c3BjNW42MGsifQ.Z9Isfs8sjZR5rj4ZKvKVdQ',
+            additionalOptions: {
+              'access token':
+                  'pk.eyJ1IjoiYW1lbm1lbGtpIiwiYSI6ImNsZWgzeXVjdjBjcnozeW14c3BjNW42MGsifQ.Z9Isfs8sjZR5rj4ZKvKVdQ',
+              'id': 'mapbox.mapbox-streets-v8'
+            }),
         MarkerLayer(
           markers: [
             Marker(
